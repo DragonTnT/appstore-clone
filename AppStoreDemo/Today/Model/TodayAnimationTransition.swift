@@ -40,16 +40,14 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
     
     func animationForPresent(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
-        
+        //1.Get fromVC and toVC
         guard let fromVC = transitionContext.viewController(forKey: .from) as? UITabBarController else { return }
         guard let tableViewController = fromVC.viewControllers?.first as? TodayViewController else { return }
-        
         guard let toVC = transitionContext.viewController(forKey: .to) as? CardDetailViewController else { return }
         guard let selectedCell = tableViewController.selectedCell else { return }
         
-        
         let frame = selectedCell.convert(selectedCell.bgBackView.frame, to: fromVC.view)        
-        
+        //2.Set presentation original size.
         toVC.view.frame = frame
         toVC.scrollView.imageView.frame.size.width = GlobalConstants.todayCardSize.width
         toVC.scrollView.imageView.frame.size.height = GlobalConstants.todayCardSize.height
@@ -57,6 +55,7 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
         containerView.addSubview(toVC.view)
         containerView.addSubview(fromVC.tabBar)
         
+        //3.Change original size to final size with animation.
         UIView.animate(withDuration: transitonDuration, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
             toVC.view.frame = UIScreen.main.bounds
             toVC.scrollView.imageView.frame.size.width = kScreenW

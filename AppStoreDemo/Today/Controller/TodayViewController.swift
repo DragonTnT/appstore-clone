@@ -13,8 +13,8 @@ class TodayViewController: UITableViewController {
     var selectedCell: TodayTableViewCell?
     
     var statusBarShouldBeHidden = false
-    
-    //info.plist里需要设置View controller-based status bar appearance = YES来获取隐藏statusBar的权限
+    //we need to set `View controller-based status bar appearance = YES` in info.plist.
+    //so we can be able to hide statusBar.
     override var prefersStatusBarHidden: Bool {
         return statusBarShouldBeHidden
     }

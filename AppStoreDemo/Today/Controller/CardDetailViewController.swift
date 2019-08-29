@@ -15,9 +15,9 @@ class CardDetailViewController: UIViewController {
     }
     
     var dismissClosure: (()->())?
-    //关闭时的交互开始的坐标
+    //the point when start to interactive
     var interactiveStartingPoint: CGPoint? = nil
-    //是否正在下拉关闭
+
     var draggingDownToDismiss = false
     
     let cell: TodayTableViewCell!
@@ -107,7 +107,7 @@ class CardDetailViewController: UIViewController {
         
         var progress = (currentLocation.y - startingPoint.y) / 100
         
-        //防止向上滑动时，控制器变大
+        //prevent viewController bigger when scrolling up
         if currentLocation.y <= startingPoint.y {
             progress = 0
         }

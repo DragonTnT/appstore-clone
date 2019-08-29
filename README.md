@@ -1,5 +1,5 @@
 # appstore-clone
-a clone of iOS appstore, writing in swift5 
+an awesome clone of iOS appstore 
 
 
 ### Overviews
@@ -22,3 +22,6 @@ Here is a clone of appstore that i wrote in Swift
 
 ![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/showcase3.gif)
 
+------
+
+There are 

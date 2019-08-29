@@ -229,8 +229,8 @@
 		06C2462723161377005B6EB7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				06C2462823161377005B6EB7 /* CardDetailViewController.swift */,
 				06C2462923161377005B6EB7 /* TodayViewController.swift */,
+				06C2462823161377005B6EB7 /* CardDetailViewController.swift */,
 				06C2462A23161377005B6EB7 /* CardPresentationController.swift */,
 			);
 			path = Controller;
