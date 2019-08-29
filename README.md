@@ -1,10 +1,6 @@
 # appstore-clone
-<<<<<<< HEAD
-an awesome clone of iOS appstore 
-=======
-an awesome clone of iOS appstore
->>>>>>> 79e004e76925239ae74c0b893037fcb2650d4b82
 
+an awesome clone of iOS appstore 
 
 ### Overviews
 
