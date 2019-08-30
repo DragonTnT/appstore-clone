@@ -11,6 +11,9 @@ import UIKit
 class UpdateTableViewController: UITableViewController {
     
     var dataSource = DataSource
+    
+    //record cellHeight to prevent flickering when tapped `more`
+    var cellHeights: [IndexPath: CGFloat] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +23,6 @@ class UpdateTableViewController: UITableViewController {
     }
     
     private func configTableView() {
-        tableView.estimatedRowHeight = 180
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.ut_registerNibCell(UpdateTableViewCell.self)
     }
     
@@ -40,13 +41,26 @@ class UpdateTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.ut_dequeueReusable(UpdateTableViewCell.self, for: indexPath)
         cell.isFirstCell = (indexPath.row == 0)
-        cell.updateClosure = { [weak self] in
+        cell.updateClosure = { [weak self] tappedCell in
             guard let StrongSelf = self else { return }
             StrongSelf.dataSource[indexPath.row].showMore = true
-            StrongSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
+            StrongSelf.tableView.reloadRows(at: [indexPath], with: .none)
+            print(indexPath)
         }
         cell.model = dataSource[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cellHeights[indexPath] = cell.frame.size.height
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let height = cellHeights[indexPath] {
+            return height
+        } else {
+            return UITableView.automaticDimension
+        }
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

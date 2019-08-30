@@ -51,7 +51,7 @@ class UpdateTableViewCell: UITableViewCell {
         }
     }
     
-    var updateClosure: (()->())?
+    var updateClosure: ((UpdateTableViewCell)->())?
     
     
     // MARK: - IBAction
@@ -59,7 +59,7 @@ class UpdateTableViewCell: UITableViewCell {
         
     }
     @IBAction func showMoreBtnAction(_ sender: UIButton) {
-        updateClosure?()
+        updateClosure?(self)
     }
     
     
