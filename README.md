@@ -2,6 +2,9 @@
 
 an awesome clone of iOS appstore 
 
+### Screenshots
+![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/cover_appstore.png)
+
 ### Overviews
 
 Here is a clone of appstore that i wrote in Swift
