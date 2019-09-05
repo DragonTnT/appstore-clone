@@ -17,3 +17,10 @@ func hasTopNotch()-> Bool {
         return false
     }
 }
+
+/// delay action
+func delay(_ timeInterval: TimeInterval, closure: @escaping()->()) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + timeInterval) {
+        closure()
+    }
+}

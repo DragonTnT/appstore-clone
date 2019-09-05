@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B0FB9A2320A6EF0004A4E4 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B0FB992320A6EF0004A4E4 /* DownloadViewController.swift */; };
+		06B0FB9E2320ABB10004A4E4 /* DownloadPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B0FB9D2320ABB10004A4E4 /* DownloadPresentationController.swift */; };
+		06B0FBA02320AE730004A4E4 /* DownloadTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B0FB9F2320AE730004A4E4 /* DownloadTransitioning.swift */; };
+		06B0FBA32320B3120004A4E4 /* DownloadBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B0FBA22320B3120004A4E4 /* DownloadBottomView.swift */; };
+		06B0FBA52320B3490004A4E4 /* DownloadBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B0FBA42320B3490004A4E4 /* DownloadBottomView.xib */; };
+		06B0FBA72320EC0B0004A4E4 /* DownloadClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B0FBA62320EC0B0004A4E4 /* DownloadClickView.swift */; };
+		06B0FBA92320EC140004A4E4 /* DownloadClickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B0FBA82320EC140004A4E4 /* DownloadClickView.xib */; };
 		06C2460E23161330005B6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C2460C23161330005B6EB7 /* LaunchScreen.storyboard */; };
 		06C2466323161377005B6EB7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2461623161377005B6EB7 /* UIColor+Extension.swift */; };
 		06C2466423161377005B6EB7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2461723161377005B6EB7 /* UIView+Extension.swift */; };
@@ -64,6 +71,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B0FB992320A6EF0004A4E4 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		06B0FB9D2320ABB10004A4E4 /* DownloadPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPresentationController.swift; sourceTree = "<group>"; };
+		06B0FB9F2320AE730004A4E4 /* DownloadTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTransitioning.swift; sourceTree = "<group>"; };
+		06B0FBA22320B3120004A4E4 /* DownloadBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBottomView.swift; sourceTree = "<group>"; };
+		06B0FBA42320B3490004A4E4 /* DownloadBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadBottomView.xib; sourceTree = "<group>"; };
+		06B0FBA62320EC0B0004A4E4 /* DownloadClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadClickView.swift; sourceTree = "<group>"; };
+		06B0FBA82320EC140004A4E4 /* DownloadClickView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadClickView.xib; sourceTree = "<group>"; };
 		06C246002316132F005B6EB7 /* AppStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C2460D23161330005B6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06C2460F23161330005B6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B0FBA12320B2F30004A4E4 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				06B0FBA22320B3120004A4E4 /* DownloadBottomView.swift */,
+				06B0FBA42320B3490004A4E4 /* DownloadBottomView.xib */,
+				06B0FBA62320EC0B0004A4E4 /* DownloadClickView.swift */,
+				06B0FBA82320EC140004A4E4 /* DownloadClickView.xib */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
 		06C245F72316132F005B6EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +295,8 @@
 			children = (
 				06C2463423161377005B6EB7 /* GameTableViewController.swift */,
 				06C2463523161377005B6EB7 /* DetailViewController.swift */,
+				06B0FB992320A6EF0004A4E4 /* DownloadViewController.swift */,
+				06B0FB9D2320ABB10004A4E4 /* DownloadPresentationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +306,7 @@
 			children = (
 				06C2463723161377005B6EB7 /* GameTopicModel.swift */,
 				06C2463823161377005B6EB7 /* GameRecommandModel.swift */,
+				06B0FB9F2320AE730004A4E4 /* DownloadTransitioning.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +314,7 @@
 		06C2463923161377005B6EB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06B0FBA12320B2F30004A4E4 /* Download */,
 				06C2463A23161377005B6EB7 /* Recommand */,
 				06C2463F23161377005B6EB7 /* Topic */,
 				06C2464423161377005B6EB7 /* Detail */,
@@ -308,9 +337,9 @@
 		06C2463F23161377005B6EB7 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
+				06C2464223161377005B6EB7 /* GameTopicCollectionViewCell.swift */,
 				06C2464023161377005B6EB7 /* GameTopicCollectionViewCell.xib */,
 				06C2464123161377005B6EB7 /* GameTopicCollectionView.swift */,
-				06C2464223161377005B6EB7 /* GameTopicCollectionViewCell.swift */,
 				06C2464323161377005B6EB7 /* GameTopicTableViewCell.swift */,
 			);
 			path = Topic;
@@ -319,12 +348,12 @@
 		06C2464423161377005B6EB7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				06C2464A23161377005B6EB7 /* DetailTopInfoCell.swift */,
 				06C2464523161377005B6EB7 /* DetailTopInfoCell.xib */,
 				06C2464623161377005B6EB7 /* DetailNewFeaturesCell.swift */,
 				06C2464723161377005B6EB7 /* DetailPreviewCollectionViewCell.swift */,
 				06C2464823161377005B6EB7 /* DetailInfomationTableViewCell.swift */,
 				06C2464923161377005B6EB7 /* DetailPreviewCollectionView.swift */,
-				06C2464A23161377005B6EB7 /* DetailTopInfoCell.swift */,
 				06C2464B23161377005B6EB7 /* DetailNewFeaturesCell.xib */,
 				06C2464C23161377005B6EB7 /* DetailInformationCell.swift */,
 				06C2464D23161377005B6EB7 /* DetailPreviewCell.swift */,
@@ -480,6 +509,8 @@
 				06C2467323161377005B6EB7 /* DS_Store in Resources */,
 				06C2468F23161377005B6EB7 /* Assets.xcassets in Resources */,
 				06C2468923161377005B6EB7 /* DetailNewFeaturesCell.xib in Resources */,
+				06B0FBA52320B3490004A4E4 /* DownloadBottomView.xib in Resources */,
+				06B0FBA92320EC140004A4E4 /* DownloadClickView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,8 +532,11 @@
 				06C2468123161377005B6EB7 /* GameTopicCollectionViewCell.swift in Sources */,
 				06C2466F23161377005B6EB7 /* CardDetailViewController.swift in Sources */,
 				06C2466C23161377005B6EB7 /* StarView.swift in Sources */,
+				06B0FBA32320B3120004A4E4 /* DownloadBottomView.swift in Sources */,
 				06C2469023161377005B6EB7 /* CommonSectionHeaderView.swift in Sources */,
+				06B0FBA72320EC0B0004A4E4 /* DownloadClickView.swift in Sources */,
 				06C2468723161377005B6EB7 /* DetailPreviewCollectionView.swift in Sources */,
+				06B0FB9A2320A6EF0004A4E4 /* DownloadViewController.swift in Sources */,
 				06C2467923161377005B6EB7 /* GameTopicModel.swift in Sources */,
 				06C2466A23161377005B6EB7 /* AppDelegate.swift in Sources */,
 				06C2466D23161377005B6EB7 /* GlobalConstants.swift in Sources */,
@@ -514,6 +548,7 @@
 				06C2469223161377005B6EB7 /* UpdateTableViewController.swift in Sources */,
 				06C2469123161377005B6EB7 /* CommonCollectionFlowLayout.swift in Sources */,
 				06C2469323161377005B6EB7 /* UpdateModel.swift in Sources */,
+				06B0FB9E2320ABB10004A4E4 /* DownloadPresentationController.swift in Sources */,
 				06C2467823161377005B6EB7 /* DetailViewController.swift in Sources */,
 				06C2466823161377005B6EB7 /* SearchTableViewController.swift in Sources */,
 				06C2467023161377005B6EB7 /* TodayViewController.swift in Sources */,
@@ -532,6 +567,7 @@
 				06C2467423161377005B6EB7 /* DetailScrollView.swift in Sources */,
 				06C2466923161377005B6EB7 /* SearchTableViewCell.swift in Sources */,
 				06C2468B23161377005B6EB7 /* DetailPreviewCell.swift in Sources */,
+				06B0FBA02320AE730004A4E4 /* DownloadTransitioning.swift in Sources */,
 				06C2468D23161377005B6EB7 /* GameLinkTableViewCell.swift in Sources */,
 				06C2468E23161377005B6EB7 /* GameLinkTableView.swift in Sources */,
 			);
@@ -673,7 +709,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKZX5RA993;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,7 +730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKZX5RA993;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

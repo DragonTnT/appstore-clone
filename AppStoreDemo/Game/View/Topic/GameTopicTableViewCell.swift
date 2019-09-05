@@ -11,6 +11,7 @@ import UIKit
 class GameTopicTableViewCell: UITableViewCell {
     
     var detailClosure: (()->())?
+    var downloadClosure: ((_ model: GameTopicModel)->())?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,6 +56,7 @@ extension GameTopicTableViewCell: UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topicCollectionView {
             let cell = collectionView.ut_dequeueReusable(GameTopicCollectionViewCell.self, for: indexPath)
+            cell.delegate = self
             cell.model = TopicDataSource[indexPath.row]
             cell.lineView.isHidden = (((indexPath.row + 1) % 3 == 0) || (indexPath.row == TopicDataSource.count - 1))
             return cell
@@ -64,6 +66,14 @@ extension GameTopicTableViewCell: UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         detailClosure?()
+    }
+}
+
+extension GameTopicTableViewCell: GameTopicCollectionViewCellDelegate {
+    
+    func gameTopicCollectionViewCellDidClickGet(_ topicCell: GameTopicCollectionViewCell) {
+        guard let indexPath = topicCollectionView.indexPath(for: topicCell) else { return }
+        downloadClosure?(TopicDataSource[indexPath.item])
     }
 }
 

@@ -28,8 +28,6 @@ extension UIViewController {
         navigationController?.navigationBar.setValue(isHidden, forKey: "hidesShadow")
     }
     
-    
-    
     /** Add icon button on navigationBar.
         We can not use `UIBarButtonItem` here for adding a button on navigationBar,
         because it will cause an unsuitable layout.
@@ -74,5 +72,13 @@ extension UIViewController {
     @objc func presentUserTableViewController() {
         let navController = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "UserNavigationControllerID")
         present(navController, animated: true, completion: nil)
+    }
+}
+
+extension UIResponder {
+    func setStatusBarColor(_ color: UIColor) {
+        if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
+            statusBar.backgroundColor = color
+        }
     }
 }

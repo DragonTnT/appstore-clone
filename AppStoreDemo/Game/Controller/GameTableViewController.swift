@@ -66,6 +66,11 @@ class GameTableViewController: UITableViewController {
             cell.detailClosure = {
                 self.pushToDetailController()
             }
+            cell.downloadClosure = { model in
+                let vc = DownloadViewController()
+                vc.model = model
+                self.present(vc, animated: true, completion: nil)
+            }
             return cell
         } else if indexPath.section == 2 {
             let cell = tableView.ut_dequeueReusable(GameLinkTableViewCell.self, for: indexPath)

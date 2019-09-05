@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol GameTopicCollectionViewCellDelegate: class {
+    func gameTopicCollectionViewCellDidClickGet(_ topicCell: GameTopicCollectionViewCell)
+}
+
 class GameTopicCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
@@ -15,11 +19,18 @@ class GameTopicCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var lineView: UIView!
     
+    weak var delegate: GameTopicCollectionViewCellDelegate?
+    
     var model: GameTopicModel! {
         didSet {
             iconImageView.image = UIImage(named: model.iconImageName)
             nameLabel.text = model.name
             descLabel.text = model.desc
         }
+    }
+    
+    
+    @IBAction func getAction(_ sender: UIButton) {
+        delegate?.gameTopicCollectionViewCellDidClickGet(self)
     }
 }

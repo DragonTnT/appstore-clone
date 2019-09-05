@@ -66,9 +66,7 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
-            statusBar.backgroundColor = UIColor.white.withAlphaComponent(0)
-        }
+        setStatusBarColor(UIColor.white.withAlphaComponent(0))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,9 +76,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
-            statusBar.backgroundColor = UIColor.white
-        }
+        setStatusBarColor(.white)
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -86,6 +86,7 @@ class TodayViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         guard let cell = tableView.cellForRow(at: indexPath) as? TodayTableViewCell else { return }
         selectedCell = cell
         

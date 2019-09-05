@@ -51,7 +51,7 @@
         <!--Search-->
         <scene sceneID="Owz-qb-slY">
             <objects>
-                <tableViewController id="Qxn-VB-fUK" customClass="SearchTableViewController" customModule="AppStoreTodayDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Qxn-VB-fUK" customClass="SearchTableViewController" customModule="AppStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QEW-sE-ETH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Updates-->
         <scene sceneID="5or-tl-5GI">
             <objects>
-                <tableViewController id="S1q-f5-Z8X" customClass="UpdateTableViewController" customModule="AppStoreTodayDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="S1q-f5-Z8X" customClass="UpdateTableViewController" customModule="AppStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zgl-og-TgX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Today-->
         <scene sceneID="ja9-Bk-QuO">
             <objects>
-                <tableViewController id="Aqn-rC-J8Q" customClass="TodayViewController" customModule="AppStoreTodayDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Aqn-rC-J8Q" customClass="TodayViewController" customModule="AppStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zun-x5-pzu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
         <!--Game-->
         <scene sceneID="U3a-Wp-BNs">
             <objects>
-                <tableViewController id="wxJ-JV-VGz" customClass="GameTableViewController" customModule="AppStoreTodayDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wxJ-JV-VGz" customClass="GameTableViewController" customModule="AppStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KJw-Rc-EV2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

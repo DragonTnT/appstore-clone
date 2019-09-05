@@ -33,6 +33,10 @@ enum GlobalConstants {
     
     //DetailViewController
     static let detailPreviewImageH: CGFloat = 155
+    
+    //DownloadViewController
+    static let doubleClickViewW: CGFloat = 140
+    static let clickBarWidth: CGFloat = 6
 }
 
 
@@ -40,4 +44,6 @@ let kScreenH = UIScreen.main.bounds.size.height
 let kScreenW = UIScreen.main.bounds.size.width
 let statusBarH = UIApplication.shared.statusBarFrame.height
 let navigationBarH: CGFloat = 44
+let tabbarExtraH: CGFloat = hasTopNotch() ? 34 : 0
+let keyWindow = UIApplication.shared.keyWindow!
 
