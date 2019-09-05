@@ -5,7 +5,7 @@ an awesome clone of iOS App Store
 
 ## Screenshots
 
-![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/cover_appstore.png)
+![](https://github.com/DragonTnT/Resource/blob/master/AppStore/cover_appstore.png)
 
 ## Description
 
@@ -16,17 +16,9 @@ If you are interested in the project, you can also submit your content.
 
 ## GIF 
 
-- Today:
+| ![](https://github.com/DragonTnT/Resource/blob/master/AppStore/showcase1.gif) | ![](https://github.com/DragonTnT/Resource/blob/master/AppStore/showcase2.gif) | ![](https://github.com/DragonTnT/Resource/blob/master/AppStore/showcase3.gif)| ![](https://github.com/DragonTnT/Resource/blob/master/AppStore/showcase4.gif)
+|:-|:-|:-|:-|
 
-![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/showcase1.gif)
-
-- Games:
-
-![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/showcase2.gif)
-
-- Updates:
-
-![](https://github.com/DragonTnT/appstore-clone/blob/master/Showcase/showcase3.gif)
 
 
 ## Features
