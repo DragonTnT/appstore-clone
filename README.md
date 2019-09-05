@@ -1,6 +1,6 @@
 # appstore-clone
 
-an awesome clone of iOS App Store 
+an awesome clone of iOS App Store.[中文简介](https://github.com/DragonTnT/appstore-clone/blob/master/%E4%B8%AD%E6%96%87%E7%AE%80%E4%BB%8B.md)
 
 
 ## Screenshots
@@ -27,3 +27,6 @@ If you are interested in the project, you can also submit your content.
 - No network, only load resource locally
 - The project has a clear structure, you can find the code you want easily
 
+## Finals
+
+If you like this project, you can give me a **star**. Thanks~
