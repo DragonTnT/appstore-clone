@@ -13,7 +13,8 @@ class GameTableViewController: UITableViewController {
     
 
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        adjustNavigationForiOS13()
         setNavigationBarBottomLineHidden(true)
         addIconButtonOnNavigationBar()
         registerCells()

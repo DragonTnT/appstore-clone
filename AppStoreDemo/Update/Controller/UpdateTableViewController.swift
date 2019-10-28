@@ -17,6 +17,7 @@ class UpdateTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        adjustNavigationForiOS13()
         setNavigationBarBottomLineHidden(true)
         addIconButtonOnNavigationBar()
         configTableView()

@@ -38,9 +38,19 @@ class DownloadViewController: UIViewController {
         if let model = model {
             bottomView.model = model
         }
+        
         view.addSubview(bottomView)
         
-        keyWindow.addSubview(clickView)
+        if #available(iOS 13.0, *) {
+            //在iOS13上，获取keywindow后，并不能将clickView加到屏幕最上方，因此将它加到view上。但这时的弹出动画就与系统不一样了。
+            //如果有知道如何做的朋友，麻烦给我提个issue，谢了
+            view.addSubview(clickView)
+        } else {
+            keyWindow.addSubview(clickView)
+        }
+        
+        
+        
     }
     
     private lazy var bottomView: DownloadBottomView = {

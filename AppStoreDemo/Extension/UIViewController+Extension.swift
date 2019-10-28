@@ -55,6 +55,18 @@ extension UIViewController {
         }
     }
     
+    // change navigationBar backgroundColor for iOS 13
+    func adjustNavigationForiOS13() {
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.backgroundColor = .white
+            navBarAppearance.shadowColor = nil
+            navigationController?.navigationBar.standardAppearance = navBarAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
+    }
+    
     
     // creat a button for navigationBar
     private func createIconButtonForNavigationBar()-> UIButton {
@@ -77,7 +89,20 @@ extension UIViewController {
 
 extension UIResponder {
     func setStatusBarColor(_ color: UIColor) {
-        if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
+        if #available(iOS 13.0, *) {
+            let tag = 38482
+            let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+
+            if let statusBar = keyWindow?.viewWithTag(tag) {
+                statusBar.backgroundColor = color
+            } else {
+                guard let statusBarFrame = keyWindow?.windowScene?.statusBarManager?.statusBarFrame else { return }
+                let statusBarView = UIView(frame: statusBarFrame)
+                statusBarView.tag = tag
+                statusBarView.backgroundColor = color
+                keyWindow?.addSubview(statusBarView)
+            }
+        } else if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
             statusBar.backgroundColor = color
         }
     }
