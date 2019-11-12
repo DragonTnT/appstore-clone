@@ -53,7 +53,6 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
         toVC.scrollView.imageView.frame.size.height = GlobalConstants.todayCardSize.height
         
         containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.tabBar)
         
         //3.Change original size to final size with animation.
         UIView.animate(withDuration: transitonDuration, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
@@ -61,7 +60,8 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
             toVC.scrollView.imageView.frame.size.width = kScreenW
             toVC.scrollView.imageView.frame.size.height = GlobalConstants.cardDetailTopImageH
             toVC.closeBtn.alpha = 1
-            fromVC.tabBar.frame = CGRect(x: 0, y: kScreenH, width: kScreenW, height: fromVC.tabBar.frame.height)
+            
+            fromVC.tabBar.frame.origin.y = kScreenH
         }) { (completed) in
             transitionContext.completeTransition(completed)
         }
@@ -81,16 +81,11 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
             fromVC.scrollView.imageView.frame.size.height = GlobalConstants.todayCardSize.height
             fromVC.closeBtn.alpha = 0
             
-            toVC.tabBar.frame = CGRect(x: 0, y: kScreenH - toVC.tabBar.frame.height, width: kScreenW, height: toVC.tabBar.frame.height)
-
+            toVC.tabBar.frame.origin.y = kScreenH - toVC.tabBar.frame.height
         }) { (completed) in
             transitionContext.completeTransition(completed)
             toVC.view.addSubview(toVC.tabBar)
         }
     }
     
-    
-    //有关tabbar的动画：
-    //在present动画时，将tabbar加入到containerView中，并增加它的origin.y，让它移除屏幕
-    //在dismiss动画时，减少tabbar的origin.y,将它移回屏幕下方，并添加回tabbarcontroller的view里，
 }
